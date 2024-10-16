@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="810.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <Pane prefHeight="810.0" prefWidth="609.0" styleClass="left-side-background" stylesheets="@../values/styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="810.0" fitWidth="609.0" pickOnBounds="true" preserveRatio="true" />
+            <AnchorPane layoutX="24.0" layoutY="25.0" prefHeight="753.0" prefWidth="547.0">
+               <children>
+                  <ImageView fitHeight="408.0" fitWidth="590.0" layoutX="26.0" layoutY="47.0" onMouseClicked="#autoSignIn" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Screenshot_2021-09-09_225922-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="260.0" fitWidth="259.0" layoutX="147.0" layoutY="455.0" onMouseClicked="#autoSignInUser" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Screenshot_2021-09-09_231551-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="609.0" prefHeight="810.0" prefWidth="707.0" stylesheets="@../values/styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="608.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane fx:id="TabPaneSelection" layoutY="67.0" prefHeight="743.0" prefWidth="707.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+              <tabs>
+                <Tab fx:id="tabSignIn" text="SignIn">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="707.0" prefWidth="707.0">
+                           <children>
+                              <Pane layoutX="99.0" layoutY="191.0" prefHeight="55.0" prefWidth="62.0" styleClass="border" stylesheets="@../values/styles.css">
+                                 <children>
+                                    <ImageView fitHeight="54.0" fitWidth="59.0" layoutX="4.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/user_64px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <TextField fx:id="tfUsername" layoutX="161.0" layoutY="191.0" prefHeight="55.0" prefWidth="456.0" promptText="Username" styleClass="text-field-signin" stylesheets="@../values/login.css" AnchorPane.leftAnchor="161.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="btnLogin" layoutX="99.0" layoutY="403.0" mnemonicParsing="false" onAction="#logInButtonAction" prefHeight="55.0" prefWidth="518.0" styleClass="left-side-background" stylesheets="@../values/login.css" text="Login" textFill="WHITE" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font name="Arial" size="24.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="labelResetPassword" alignment="CENTER" layoutX="266.0" layoutY="475.0" onMouseClicked="#forgotPasswordAction" prefHeight="37.0" prefWidth="184.0" stylesheets="@../values/login.css" text="Forgot Password?" textFill="#666666" AnchorPane.leftAnchor="266.0" AnchorPane.rightAnchor="257.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutY="-1.0" prefHeight="190.0" prefWidth="707.0">
+                                 <children>
+                                    <Label fx:id="errorMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="67.0" prefHeight="123.0" prefWidth="700.0" textFill="#f50000">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children></Pane>
+                              <Label fx:id="labelCreateAccount" alignment="CENTER" layoutX="250.0" layoutY="532.0" onMouseClicked="#createAccountAction" prefHeight="34.0" prefWidth="216.0" stylesheets="@../values/login.css" text="Create a new account" textFill="#666666" underline="true" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="241.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutX="99.0" layoutY="298.0" prefHeight="55.0" prefWidth="62.0" styleClass="border" stylesheets="@../values/styles.css">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="54.0" layoutX="6.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/password_64px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <TextField fx:id="tfPasswordShow" layoutX="161.0" layoutY="298.0" pickOnBounds="false" prefHeight="55.0" prefWidth="456.0" styleClass="text-field-signin" stylesheets="@../values/login.css" visible="false" AnchorPane.leftAnchor="161.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <PasswordField fx:id="tfPassword" layoutX="161.0" layoutY="298.0" prefHeight="55.0" prefWidth="456.0" promptText="Password" styleClass="text-field-signin" stylesheets="@../values/login.css" AnchorPane.leftAnchor="161.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </PasswordField>
+                              <Pane layoutX="99.0" layoutY="248.0" prefHeight="50.0" prefWidth="518.0" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0" />
+                              <Pane layoutX="99.0" layoutY="353.0" prefHeight="50.0" prefWidth="518.0" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0" />
+                              <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="566.0" layoutY="305.0" onMousePressed="#showPassword" onMouseReleased="#hidePassword" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="99.0">
+                                 <image>
+                                    <Image url="@../img/eye_64px.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="tabSignUp" text="SignUp">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="tfFirstNameNew" layoutX="99.0" layoutY="43.0" prefHeight="55.0" prefWidth="252.0" promptText="First Name" stylesheets="@../values/login.css" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="356.0">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font></TextField>
+                              <TextField fx:id="tfLastNameNew" layoutX="382.0" layoutY="43.0" prefHeight="55.0" prefWidth="238.0" promptText="Last Name" stylesheets="@../values/login.css" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font></TextField>
+                              <TextField fx:id="tfMobileNoNew" layoutX="99.0" layoutY="133.0" onKeyTyped="#mobileNoReleased" prefHeight="55.0" prefWidth="512.0" promptText="Mobile Number -  (+8801) / (01) XXXXXXXXX " stylesheets="@../values/login.css" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font></TextField>
+                              <TextField fx:id="tfEmailNew" layoutX="99.0" layoutY="225.0" onKeyTyped="#emailReleased" prefHeight="55.0" prefWidth="512.0" promptText="Email ID" stylesheets="@../values/login.css" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font></TextField>
+                              <TextField fx:id="tfUsernameNew" layoutX="99.0" layoutY="317.0" onKeyTyped="#usernameReleased" prefHeight="55.0" prefWidth="512.0" promptText="Username" stylesheets="@../values/login.css" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font></TextField>
+                              <TextField fx:id="tfAddressNew" layoutX="99.0" layoutY="498.0" prefHeight="55.0" prefWidth="512.0" promptText="Address" stylesheets="@../values/login.css" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font></TextField>
+                              <Button fx:id="btnSignUp" layoutX="99.0" layoutY="592.0" mnemonicParsing="false" onAction="#signUpButtonAction" prefHeight="55.0" prefWidth="512.0" stylesheets="@../values/login.css" text="Sign Up" textFill="WHITE" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font name="Arial" size="24.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="tfPasswordShow1" layoutX="99.0" layoutY="407.0" pickOnBounds="false" prefHeight="55.0" prefWidth="450.0" stylesheets="@../values/login.css" visible="false" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <PasswordField fx:id="tfPassword1" layoutX="99.0" layoutY="406.0" onKeyTyped="#passwordReleased" prefHeight="55.0" prefWidth="450.0" promptText="Password" stylesheets="@../values/login.css" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </PasswordField>
+                              <Pane layoutX="11.0" layoutY="647.0" prefHeight="71.0" prefWidth="686.0">
+                                 <children>
+                                    <Label fx:id="errorMssgLabelSignUp" alignment="CENTER" layoutX="31.0" layoutY="3.0" prefHeight="66.0" prefWidth="625.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="565.0" layoutY="413.0" onMousePressed="#showPassword1" onMouseReleased="#hidePassword1" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="100.0">
+                                 <image>
+                                    <Image url="@../img/eye_64px.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelErrorUsername" layoutX="99.0" layoutY="280.0" prefHeight="37.0" prefWidth="518.0" />
+                              <Label fx:id="labelErrorPassword" layoutX="99.0" layoutY="369.0" prefHeight="37.0" prefWidth="518.0" />
+                              <Label fx:id="labelErrorEmail" layoutX="99.0" layoutY="188.0" prefHeight="37.0" prefWidth="518.0" />
+                              <Label fx:id="labelErrorMbl" layoutX="99.0" layoutY="98.0" prefHeight="37.0" prefWidth="518.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="tabVerify" text="Verify">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="tfVerifyMobile" layoutX="102.0" layoutY="236.0" prefHeight="55.0" prefWidth="512.0" promptText="Enter your mobile no." stylesheets="@../values/login.css" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font></TextField>
+                              <TextField fx:id="tfVerifyEmail" layoutX="102.0" layoutY="339.0" prefHeight="55.0" prefWidth="512.0" promptText="Enter your email id." stylesheets="@../values/login.css" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font></TextField>
+                              <Button fx:id="btnVerify" layoutX="99.0" layoutY="446.0" mnemonicParsing="false" onAction="#verifyButtonAction" prefHeight="55.0" prefWidth="512.0" stylesheets="@../values/login.css" text="Verify" textFill="WHITE" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font name="Arial" size="24.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tabReset" text="Reset">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="1.0" prefHeight="235.0" prefWidth="707.0" />
+                              <Button fx:id="btnReset" layoutX="99.0" layoutY="444.0" mnemonicParsing="false" onAction="#resetButtonAction" prefHeight="55.0" prefWidth="518.0" stylesheets="@../values/login.css" text="Reset" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="24.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="tfResetConfirmPasswordShow" layoutX="99.0" layoutY="339.0" pickOnBounds="false" prefHeight="55.0" prefWidth="450.0" stylesheets="@../values/login.css" visible="false" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <PasswordField fx:id="tfResetConfirmPassword" layoutX="99.0" layoutY="339.0" prefHeight="55.0" prefWidth="450.0" promptText="Confirm Password" stylesheets="@../values/login.css" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </PasswordField>
+                              <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="568.0" layoutY="346.0" onMousePressed="#showPasswordReset1" onMouseReleased="#hidePasswordReset1" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/eye_64px.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="tfResetNewPasswordShow" layoutX="99.0" layoutY="235.0" pickOnBounds="false" prefHeight="55.0" prefWidth="450.0" stylesheets="@../values/login.css" visible="false" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <PasswordField fx:id="tfResetNewPassword" layoutX="99.0" layoutY="235.0" prefHeight="55.0" prefWidth="450.0" promptText="Enter New Password" stylesheets="@../values/login.css" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="90.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </PasswordField>
+                              <Pane layoutX="99.0" layoutY="394.0" prefHeight="50.0" prefWidth="518.0" />
+                              <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="568.0" layoutY="242.0" onMousePressed="#showPasswordReset" onMouseReleased="#hidePasswordReset" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/eye_64px.png" />
+                                 </image>
+                              </ImageView>
+                              <Pane layoutX="99.0" layoutY="290.0" prefHeight="50.0" prefWidth="518.0" />
+                              <Pane layoutX="5.0" layoutY="499.0" prefHeight="235.0" prefWidth="707.0">
+                                 <children>
+                                    <Label fx:id="labelResetErrorMsg" alignment="CENTER" layoutX="99.0" layoutY="21.0" prefHeight="38.0" prefWidth="509.0" textFill="RED">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Pane fx:id="slidingPane" layoutX="202.0" layoutY="29.0" prefHeight="50.0" prefWidth="304.0" styleClass="product-item" stylesheets="@../values/styles.css">
+               <children>
+                  <Label fx:id="labelSignIn" alignment="CENTER" layoutX="37.0" layoutY="12.0" onMouseClicked="#signInClicked" prefHeight="26.0" prefWidth="79.0" text="SignIn" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                     <stylesheets>
+                        <URL value="@../values/styles.css" />
+                        <URL value="@../values/login.css" />
+                     </stylesheets>
+                  </Label>
+                  <Label fx:id="labelSignUp" alignment="CENTER" layoutX="189.0" layoutY="12.0" onMouseClicked="#signUpClicked" prefHeight="26.0" prefWidth="79.0" text="SignUp" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                     <stylesheets>
+                        <URL value="@../values/styles.css" />
+                        <URL value="@../values/login.css" />
+                     </stylesheets>
+                  </Label>
+                  <Label fx:id="labelStatus" alignment="CENTER" prefHeight="50.0" prefWidth="152.0" styleClass="product-item-grey" stylesheets="@../values/styles.css" text="SignIn" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

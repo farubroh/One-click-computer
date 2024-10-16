@@ -1,0 +1,27 @@
+.mainFXMLClass{
+
+}
+.product-item-light-grey{
+    -fx-background-color: #ADADAD;
+    -fx-background-radius: 20;
+}
+.product-item-pink{
+    -fx-background-color: #D8136B;
+    -fx-background-radius: 30;
+}
+.product-item-white{
+    -fx-background-color: white;
+    -fx-background-radius: 30;
+}
+.border{
+    -fx-border-color: #D8136B;
+    -fx-border-radius: 30;
+    -fx-border-width: 3;
+}
+.border-grey{
+    -fx-border-color: #666666;
+    -fx-border-radius: 30;
+    -fx-border-width: 3;
+}
+
+

@@ -1,0 +1,128 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.gradient-background{
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100% ,#666666,#ADADAD);
+    -fx-background-radius: 20;
+}
+
+.dashboard-box{
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-background-radius: 20;
+}
+
+.chart-plot-background{
+    -fx-background-color: transparent;  
+}
+
+.chart-series-line {  
+    -fx-stroke: #E43419;
+    -fx-stroke-width: 2px;
+    -fx-effect: null;
+}
+
+.axis{
+    -fx-stroke: #fff;
+    -fx-fill: #fff;
+    -fx-font-size: 24;
+    -fx-tick-label-fill: #fff;
+}
+
+.left-background{
+    -fx-background-color: #ADADAD;
+}
+
+.label{   
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+    -fx-text-fill: white;   
+}
+
+.label-dashboard{
+    -fx-font-weight: bold;
+    -fx-font-size: 30;
+    -fx-text-fill: white;
+}
+
+.label-small{
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+    -fx-text-fill: white;
+}
+
+.combo-box{
+    -fx-background-color: white;
+}
+
+.product-item-grey{
+    -fx-background-color: #666666;
+    -fx-background-radius: 20;
+}
+.product-item-light-grey{
+    -fx-background-color: #ADADAD;
+    -fx-background-radius: 20;
+}
+
+.search-box{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 100;
+}
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.1),10.0,0.0,0.0,10.0);
+}
+
+.button{
+    -fx-font-weight: bold;
+    -fx-background-color: #666666;
+    -fx-background-radius: 20;
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+}
+.button:hover{
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-font-size: 18;
+    -fx-text-fill: #666666;
+    -fx-border-color: #666666;
+    -fx-border-radius: 18;
+    -fx-border-width: 3;  
+}
+.table-view .column-header, .table-view .column-header-background .filler {
+    -fx-cell-size : 20;
+    -fx-background-color: #666666
+}
+
+.table-view .column-header .label {
+    -fx-text-fill : white;
+    -fx-font-weight : bold;
+    -fx-alignment: CENTER;
+}
+
+.table-view .cell {
+    -fx-cell-size: 30;
+    -fx-alignment: center-left;
+    -fx-text-fill : #000000;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #ADADAD;
+}
+
+.table-row-cell :selected .text{
+    -fx-fill: white;
+}
+
+.tab-pane{
+    -fx-tab-max-height: 0px;
+}
+.tab-pane .tab-header-area{
+    visibility: hidden;
+}
+
+
